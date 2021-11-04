@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+:root{
+    --main-color: #443;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all linear .2s;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+    height: 1000px;
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    border-radius: .5rem;
+    color: var(--main-color);
+    background: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    border: .1rem solid #ccc;
+}
+
+.btn:hover{
+    background-color: #ccc;
+    color: #fff;
+}
+.header{
+    position: fixed;
+    top:0;left: 0;right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding: 2rem 9%;
+}
+
+.header .logo{
+    color: var(--main-color);
+    font-size: 2.3rem;
+}
+.header .logo i{
+    padding-left: .5rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.header .btn{
+    margin-top: 0;
+}
+#menu-btn{
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+}
+
+@media(max-width: 768px){
+    #menu-btn{
+        display: initial;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar a{
+        display: block;
+        font-size: 2.2rem;
+        margin: 3rem 2rem;
+       
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
