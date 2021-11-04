@@ -21,6 +21,10 @@ html{
     height: 1000px;
 }
 
+section{
+    padding: 2rem 9%;
+
+}
 .btn {
     display: inline-block;
     padding: .9rem 1.5rem;
@@ -51,15 +55,22 @@ html{
 
 .header .logo{
     color: var(--main-color);
-    font-size: 2.3rem;
+    font-size: 2.5rem;
 }
 .header .logo i{
-    padding-left: .5rem;
+    padding-left: .8rem;
 }
 
 .header .navbar a{
-    margin: 0 1rem;
+    padding: 1.4rem 1.6rem;
+    /* margin: 0 1rem; */
     font-size: 1.7rem;
+    color: var(--main-color);
+    border-radius: .5rem;
+}
+.header .navbar a:first-child,
+.header .navbar a:hover{
+    background-color: #ccc;
     color: var(--main-color);
 }
 
@@ -72,7 +83,47 @@ html{
     cursor: pointer;
     display: none;
 }
+.home{
+    min-height: 100vh;
+    padding-top: 12rem;
+    background: url(/assets/image/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
 
+.home .row .content{
+    flex: 1 1 42rem;
+}
+
+.home .row .image{
+    flex: 1 1 42rem;
+    padding-top: 10rem;
+    text-align: center;
+
+}
+
+.home .row .image img{
+    height: 35rem;
+    animation: float 4s linear infinite;
+
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    
+    }
+    50%{
+        transform: translateY(-7rem);
+    }
+
+}
 
 
 
@@ -107,6 +158,9 @@ html{
     }
     .header{
         padding: 2rem;
+    }
+    section{
+        padding: 2rem;   
     }
 }
 
